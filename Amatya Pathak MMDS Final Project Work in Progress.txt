@@ -1,0 +1,24 @@
+Amatya Pathak
+April 17, 2023
+CS-UY 3943 BK07 Mining Massive Datasets
+
+	After further research, I have decided to tweak my music-based project to try and identify the genre of a song based on features like the title, album, tempo, waveform, and Spotify-assigned metrics for things like "danceability" and "instrumentalness". Spotify calls these features psychoacoustic parameters, and these are provided in datasets as a value between 0 and 1. I am experimenting with adding one or two psychoacoustic parameters of my own to small training samples to cover the basic emotions (hype songs, sad songs, etc).
+	Speaking of datasets, the Million Song Dataset does not seem to be accessible, and so I found another one containing the labelled features that would be helpful for training. The dataset is called gtzan and the link is here: https://www.tensorflow.org/datasets/catalog/gtzan
+	There is also a very useful API called Spotipy that I have started using to select music by playlist to obtain the training data. 
+https://spotipy.readthedocs.io/en/2.22.1/
+	There are long varied playlists out there that are good training sets(one is conveniently called "Biggest Playlist Ever" with 5000 songs, 10000 being the max). I am leaning towards a neural network (with various learning rates, layers, and other tweakable parameters that I can adjust for best performance) that can classify songs into ten genres to keep it simple:
+~blues
+~classical
+~country
+~disco
+~hiphop
+~jazz
+~metal
+~pop
+~reggae
+~rock  
+	 
+	I will test the neural network on a test playlist (likely consisting of a random sample from my own liked songs playlist, everything I have liked across all genres and years of using Spotify). It would be interesting to not only see the level of accuracy for songs that squarely fit in one genre, but also how the neural network classifies songs that are known to mix genres or be considered "genre-defying"
+
+
+
